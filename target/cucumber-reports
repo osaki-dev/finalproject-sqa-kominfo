@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.11.0"},"runtime":{"name":"Java HotSpot(TM) 64-Bit Server VM","version":"21+35-LTS-2513"},"os":{"name":"Windows 11"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1697859595","nanos":641038300}}},{"source":{"uri":"file:///D:/finalproject-sqa/src/test/resources/features/cart.feature","data":"Feature: Shopping Cart\r\n\r\n  Scenario: Add to cart\r\n    Given I am logged in to SauceDemo\r\n    When I add a product to the cart\r\n    Then I should see the product in my cart\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///D:/finalproject-sqa/src/test/resources/features/cart.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Shopping Cart","children":[{"scenario":{"location":{"line":3,"column":3},"keyword":"Scenario","name":"Add to cart","steps":[{"location":{"line":4,"column":5},"keyword":"Given ","text":"I am logged in to SauceDemo","id":"006e62c9-5e87-49ee-b448-e096f61dc10f"},{"location":{"line":5,"column":5},"keyword":"When ","text":"I add a product to the cart","id":"3cd5c111-8cd0-4f6d-9c84-dd6fe8b1c411"},{"location":{"line":6,"column":5},"keyword":"Then ","text":"I should see the product in my cart","id":"bb65b0fa-9990-4f11-83fc-2467d176c2a0"}],"id":"5c69d224-df78-4f5c-899a-6d56687e9f4a"}}]}}},{"pickle":{"id":"c01d9ffc-7adf-47d7-b05d-ede6d5f7fc5b","uri":"file:///D:/finalproject-sqa/src/test/resources/features/cart.feature","name":"Add to cart","language":"en","steps":[{"text":"I am logged in to SauceDemo","id":"12295def-7669-41f7-90d3-b9c9d042b431","astNodeIds":["006e62c9-5e87-49ee-b448-e096f61dc10f"]},{"text":"I add a product to the cart","id":"e14cedbc-43f7-4e5f-8ca2-e72992be1539","astNodeIds":["3cd5c111-8cd0-4f6d-9c84-dd6fe8b1c411"]},{"text":"I should see the product in my cart","id":"48f91009-0142-43ea-801f-8110300c269e","astNodeIds":["bb65b0fa-9990-4f11-83fc-2467d176c2a0"]}],"astNodeIds":["5c69d224-df78-4f5c-899a-6d56687e9f4a"]}},{"source":{"uri":"file:///D:/finalproject-sqa/src/test/resources/features/checkout.feature","data":"Feature: Checkout\r\n\r\n  Scenario: Proceed to checkout\r\n    Given I am logged in to SauceDemo\r\n    When I add a product to the cart\r\n    And I proceed to checkout\r\n    Then I should see the checkout information\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///D:/finalproject-sqa/src/test/resources/features/checkout.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Checkout","children":[{"scenario":{"location":{"line":3,"column":3},"keyword":"Scenario","name":"Proceed to checkout","steps":[{"location":{"line":4,"column":5},"keyword":"Given ","text":"I am logged in to SauceDemo","id":"ac4339ca-2bdb-40c9-b2be-2a0be3fba8f0"},{"location":{"line":5,"column":5},"keyword":"When ","text":"I add a product to the cart","id":"d6bdd633-9c12-4657-aa31-bd114f599264"},{"location":{"line":6,"column":5},"keyword":"And ","text":"I proceed to checkout","id":"b7130b33-9674-41c1-9195-9a16e072ce08"},{"location":{"line":7,"column":5},"keyword":"Then ","text":"I should see the checkout information","id":"eaf0c7d9-db6a-418c-993c-c782271e3bd4"}],"id":"a04aa588-6cf2-481e-84fe-571f1ab1c69e"}}]}}},{"pickle":{"id":"1cc1600b-5716-4867-abc3-0a1ad38a1cd6","uri":"file:///D:/finalproject-sqa/src/test/resources/features/checkout.feature","name":"Proceed to checkout","language":"en","steps":[{"text":"I am logged in to SauceDemo","id":"9bedfc34-0dec-4cf7-b286-a125802013d4","astNodeIds":["ac4339ca-2bdb-40c9-b2be-2a0be3fba8f0"]},{"text":"I add a product to the cart","id":"454f4db9-40ce-46d2-89e4-c2fa31ca3fcc","astNodeIds":["d6bdd633-9c12-4657-aa31-bd114f599264"]},{"text":"I proceed to checkout","id":"da3c10d9-c5bf-41ab-ae74-b8bf89092a58","astNodeIds":["b7130b33-9674-41c1-9195-9a16e072ce08"]},{"text":"I should see the checkout information","id":"80248d3a-4d99-4a29-bb5a-8def4386dc67","astNodeIds":["eaf0c7d9-db6a-418c-993c-c782271e3bd4"]}],"astNodeIds":["a04aa588-6cf2-481e-84fe-571f1ab1c69e"]}},{"source":{"uri":"file:///D:/finalproject-sqa/src/test/resources/features/inventory.feature","data":"Feature: Inventory Page\r\n\r\n  Scenario: View products\r\n    Given I am logged in to SauceDemo\r\n    When I go to the inventory page\r\n    Then I should see a list of products\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///D:/finalproject-sqa/src/test/resources/features/inventory.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Inventory Page","children":[{"scenario":{"location":{"line":3,"column":3},"keyword":"Scenario","name":"View products","steps":[{"location":{"line":4,"column":5},"keyword":"Given ","text":"I am logged in to SauceDemo","id":"1a8ebdef-659b-47f4-b6b1-e7816163526d"},{"location":{"line":5,"column":5},"keyword":"When ","text":"I go to the inventory page","id":"fc28f6d5-a618-49ea-bef6-d2053d2005c3"},{"location":{"line":6,"column":5},"keyword":"Then ","text":"I should see a list of products","id":"109fad83-653d-4e9d-8f95-4671e33ac532"}],"id":"37a4259e-46f1-4492-9063-cb6879a9bafc"}}]}}},{"pickle":{"id":"c7c3422d-76d7-4584-b3ae-400fae5c8278","uri":"file:///D:/finalproject-sqa/src/test/resources/features/inventory.feature","name":"View products","language":"en","steps":[{"text":"I am logged in to SauceDemo","id":"a56bf519-df72-48f7-ae98-adbb4843a87a","astNodeIds":["1a8ebdef-659b-47f4-b6b1-e7816163526d"]},{"text":"I go to the inventory page","id":"ed52e759-363f-45c8-b47b-555bfae077e8","astNodeIds":["fc28f6d5-a618-49ea-bef6-d2053d2005c3"]},{"text":"I should see a list of products","id":"abf3965e-2b57-4c92-890f-8a02ea838510","astNodeIds":["109fad83-653d-4e9d-8f95-4671e33ac532"]}],"astNodeIds":["37a4259e-46f1-4492-9063-cb6879a9bafc"]}},{"source":{"uri":"file:///D:/finalproject-sqa/src/test/resources/features/login.feature","data":"Feature: Login to SauceDemo\r\n\r\n  Scenario: Valid login\r\n    Given I am on the SauceDemo login page\r\n    When I enter valid credentials\r\n    And I click the login button\r\n    Then I should be logged in\r\n\r\n  Scenario: Invalid login\r\n    Given I am on the SauceDemo login page\r\n    When I enter invalid credentials\r\n    And I click the login button\r\n    Then I should see an error message\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///D:/finalproject-sqa/src/test/resources/features/login.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Login to SauceDemo","children":[{"scenario":{"location":{"line":3,"column":3},"keyword":"Scenario","name":"Valid login","steps":[{"location":{"line":4,"column":5},"keyword":"Given ","text":"I am on the SauceDemo login page","id":"1746e16b-f5e3-4632-8cbd-1fb9eb48fe32"},{"location":{"line":5,"column":5},"keyword":"When ","text":"I enter valid credentials","id":"6483fd7c-42da-4596-9c6d-89fd93b1148b"},{"location":{"line":6,"column":5},"keyword":"And ","text":"I click the login button","id":"990e8cc2-bf48-4686-aa2b-54d96b3d9b37"},{"location":{"line":7,"column":5},"keyword":"Then ","text":"I should be logged in","id":"a3f3429d-fbb9-49b6-a122-6262536e7990"}],"id":"23c28ff7-9a6a-4241-a128-4a3818798a3a"}},{"scenario":{"location":{"line":9,"column":3},"keyword":"Scenario","name":"Invalid login","steps":[{"location":{"line":10,"column":5},"keyword":"Given ","text":"I am on the SauceDemo login page","id":"d74e56db-85fc-4ae9-b5af-bcd9f7494407"},{"location":{"line":11,"column":5},"keyword":"When ","text":"I enter invalid credentials","id":"94164acf-1959-45d9-b2a9-849520ae47af"},{"location":{"line":12,"column":5},"keyword":"And ","text":"I click the login button","id":"efb54b4e-e99a-46df-b459-cab590c55fb6"},{"location":{"line":13,"column":5},"keyword":"Then ","text":"I should see an error message","id":"351e9585-d952-4f51-9c2d-108643572af9"}],"id":"c83506ef-14cf-4686-994b-10261d437058"}}]}}},{"pickle":{"id":"7e61bb72-b95f-4262-add1-92395585d4b9","uri":"file:///D:/finalproject-sqa/src/test/resources/features/login.feature","name":"Valid login","language":"en","steps":[{"text":"I am on the SauceDemo login page","id":"f976ba53-355e-47d2-a93d-524c482fd993","astNodeIds":["1746e16b-f5e3-4632-8cbd-1fb9eb48fe32"]},{"text":"I enter valid credentials","id":"539f7d2b-048e-4d7a-a24f-85657dc9776f","astNodeIds":["6483fd7c-42da-4596-9c6d-89fd93b1148b"]},{"text":"I click the login button","id":"c181da65-7206-4e81-a470-54c282be428c","astNodeIds":["990e8cc2-bf48-4686-aa2b-54d96b3d9b37"]},{"text":"I should be logged in","id":"bc75ce16-22e7-467a-8928-4112fbf1b5a1","astNodeIds":["a3f3429d-fbb9-49b6-a122-6262536e7990"]}],"astNodeIds":["23c28ff7-9a6a-4241-a128-4a3818798a3a"]}},{"pickle":{"id":"1a9caae7-de8c-4308-ab2f-d0ee1c5a391c","uri":"file:///D:/finalproject-sqa/src/test/resources/features/login.feature","name":"Invalid login","language":"en","steps":[{"text":"I am on the SauceDemo login page","id":"06a536a5-3d53-43d1-8c90-02ab80b87c94","astNodeIds":["d74e56db-85fc-4ae9-b5af-bcd9f7494407"]},{"text":"I enter invalid credentials","id":"c8746240-f095-4d00-979f-e6481ef53562","astNodeIds":["94164acf-1959-45d9-b2a9-849520ae47af"]},{"text":"I click the login button","id":"bcc3172f-0259-458f-977b-6547f4566b0a","astNodeIds":["efb54b4e-e99a-46df-b459-cab590c55fb6"]},{"text":"I should see an error message","id":"652d3c0c-6364-4221-917b-fbefb84d38a2","astNodeIds":["351e9585-d952-4f51-9c2d-108643572af9"]}],"astNodeIds":["c83506ef-14cf-4686-994b-10261d437058"]}},{"testCase":{"id":"af3f592b-ae10-4258-a9c5-242e078295db","pickleId":"c01d9ffc-7adf-47d7-b05d-ede6d5f7fc5b","testSteps":[{"id":"67a9dc94-4ea0-4052-818b-a9ddc1a8a32f","pickleStepId":"12295def-7669-41f7-90d3-b9c9d042b431","stepDefinitionIds":["8b200841-1524-474f-a0b6-8566750d61a1"],"stepMatchArgumentsLists":[{}]},{"id":"4d1643f5-96e7-411a-82f6-8e009768b641","pickleStepId":"e14cedbc-43f7-4e5f-8ca2-e72992be1539","stepDefinitionIds":["416e9fce-afa2-4927-ab47-e4d82ec6f94d"],"stepMatchArgumentsLists":[{}]},{"id":"25942734-0300-44c1-bc09-0edc0b7e0529","pickleStepId":"48f91009-0142-43ea-801f-8110300c269e","stepDefinitionIds":["cdbe2272-68e6-4a48-80aa-0c156dec8d62"],"stepMatchArgumentsLists":[{}]}]}},{"testCaseStarted":{"timestamp":{"seconds":"1697859595","nanos":724176700},"testCaseId":"af3f592b-ae10-4258-a9c5-242e078295db","id":"9e938b6f-28f0-4b93-b239-faa3acf780f4"}},{"testStepStarted":{"timestamp":{"seconds":"1697859595","nanos":727620000},"testStepId":"67a9dc94-4ea0-4052-818b-a9ddc1a8a32f","testCaseStartedId":"9e938b6f-28f0-4b93-b239-faa3acf780f4"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027NICHI\u0027, ip: \u0027172.16.0.2\u0027, os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002721\u0027\nDriver info: driver.version: ChromeDriver\r\n\tat org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)\r\n\tat org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:181)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:168)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:123)\r\n\tat stepDefinitions.CommonSteps.i_am_logged_in_to_SauceDemo(CommonSteps.java:14)\r\n\tat ✽.I am logged in to SauceDemo(file:///D:/finalproject-sqa/src/test/resources/features/cart.feature:4)\r\nCaused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:6429/status] to be available after 20006 ms\r\n\tat org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)\r\n\tat org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)\r\n\tat org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:181)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:168)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:123)\r\n\tat stepDefinitions.CommonSteps.i_am_logged_in_to_SauceDemo(CommonSteps.java:14)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\r\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\r\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\r\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\r\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\r\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\r\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\r\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\r\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:73)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:200)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:235)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)\r\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)\r\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)\r\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\r\nCaused by: java.util.concurrent.TimeoutException\r\n\tat java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)\r\n\tat com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)\r\n\tat org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)\r\n\t... 52 more\r\n","duration":{"seconds":"20","nanos":168501300}},"timestamp":{"seconds":"1697859615","nanos":896121300},"testStepId":"67a9dc94-4ea0-4052-818b-a9ddc1a8a32f","testCaseStartedId":"9e938b6f-28f0-4b93-b239-faa3acf780f4"}},{"testStepStarted":{"timestamp":{"seconds":"1697859615","nanos":906425100},"testStepId":"4d1643f5-96e7-411a-82f6-8e009768b641","testCaseStartedId":"9e938b6f-28f0-4b93-b239-faa3acf780f4"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1697859615","nanos":906425100},"testStepId":"4d1643f5-96e7-411a-82f6-8e009768b641","testCaseStartedId":"9e938b6f-28f0-4b93-b239-faa3acf780f4"}},{"testStepStarted":{"timestamp":{"seconds":"1697859615","nanos":907425600},"testStepId":"25942734-0300-44c1-bc09-0edc0b7e0529","testCaseStartedId":"9e938b6f-28f0-4b93-b239-faa3acf780f4"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1697859615","nanos":907425600},"testStepId":"25942734-0300-44c1-bc09-0edc0b7e0529","testCaseStartedId":"9e938b6f-28f0-4b93-b239-faa3acf780f4"}},{"testCaseFinished":{"timestamp":{"seconds":"1697859615","nanos":907425600},"testCaseStartedId":"9e938b6f-28f0-4b93-b239-faa3acf780f4"}},{"testCase":{"id":"9e401e22-8e60-4db2-88f2-37ce94ebd0b7","pickleId":"1cc1600b-5716-4867-abc3-0a1ad38a1cd6","testSteps":[{"id":"2ffe0a39-8c8e-4a2a-90be-b324fec4e498","pickleStepId":"9bedfc34-0dec-4cf7-b286-a125802013d4","stepDefinitionIds":["e7272cc9-7cc8-478b-b5a5-d679ffa2f2ee"],"stepMatchArgumentsLists":[{}]},{"id":"218b6e6c-f573-413c-8c77-84ab0235f8b3","pickleStepId":"454f4db9-40ce-46d2-89e4-c2fa31ca3fcc","stepDefinitionIds":["44db408a-17f8-4831-91e8-b42cb02bbe5c"],"stepMatchArgumentsLists":[{}]},{"id":"0eae3955-e931-4135-acc2-c1140d062255","pickleStepId":"da3c10d9-c5bf-41ab-ae74-b8bf89092a58","stepDefinitionIds":["ad35440a-94e2-4e5a-9cac-3af81ee0eb59"],"stepMatchArgumentsLists":[{}]},{"id":"4ea6e38a-9317-49e2-b7ae-bad7b1692d6c","pickleStepId":"80248d3a-4d99-4a29-bb5a-8def4386dc67","stepDefinitionIds":["0c55661d-ea0d-42d0-917b-52955bcf5db7"],"stepMatchArgumentsLists":[{}]}]}},{"testCaseStarted":{"timestamp":{"seconds":"1697859615","nanos":927536900},"testCaseId":"9e401e22-8e60-4db2-88f2-37ce94ebd0b7","id":"38d331cb-f1e5-49ad-9514-50f8fce07644"}},{"testStepStarted":{"timestamp":{"seconds":"1697859615","nanos":928537300},"testStepId":"2ffe0a39-8c8e-4a2a-90be-b324fec4e498","testCaseStartedId":"38d331cb-f1e5-49ad-9514-50f8fce07644"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027NICHI\u0027, ip: \u0027172.16.0.2\u0027, os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002721\u0027\nDriver info: driver.version: ChromeDriver\r\n\tat org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)\r\n\tat org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:181)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:168)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:123)\r\n\tat stepDefinitions.CommonSteps.i_am_logged_in_to_SauceDemo(CommonSteps.java:14)\r\n\tat ✽.I am logged in to SauceDemo(file:///D:/finalproject-sqa/src/test/resources/features/checkout.feature:4)\r\nCaused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:32753/status] to be available after 20010 ms\r\n\tat org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)\r\n\tat org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)\r\n\tat org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:181)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:168)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:123)\r\n\tat stepDefinitions.CommonSteps.i_am_logged_in_to_SauceDemo(CommonSteps.java:14)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\r\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\r\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\r\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\r\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\r\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\r\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\r\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\r\n\tat io.cucumber.core.runner.TestStep.execu

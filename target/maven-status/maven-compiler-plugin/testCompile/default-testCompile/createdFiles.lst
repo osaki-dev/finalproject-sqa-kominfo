@@ -1,0 +1,6 @@
+stepDefinitions\CheckoutSteps.class
+stepDefinitions\LoginSteps.class
+stepDefinitions\CommonSteps.class
+runners\TestRunner.class
+stepDefinitions\InventorySteps.class
+stepDefinitions\CartSteps.class
